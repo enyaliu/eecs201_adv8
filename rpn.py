@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 import operator
-
+import math
 
 operators = {
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul,
     '/': operator.truediv,
+    '^': pow
 }
 
 def calculate(myarg):
