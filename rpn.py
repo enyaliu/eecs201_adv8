@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import operator
 import readline
 from retrying import retry
@@ -30,8 +29,7 @@ def calculate(myarg):
         raise TypeError("Too many parameters")
     return stack.pop()
 
-
-@retry
+@retry(stop_max_attempt_number=10)
 def main():
     while True:
         try:
@@ -39,7 +37,7 @@ def main():
             print("Result: ", result)
         except Exception as e:
             print(e)
-            print("Please try again")
+            print("Please try again.")
             raise
 
 if __name__ == '__main__':
