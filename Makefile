@@ -1,5 +1,9 @@
 test:
 	python3 -m unittest
 
-.PHONY: test
+coverage:
+	coverage run -m unittest
+	coverage report
+
+.PHONY: test coverage
 
