@@ -5,5 +5,9 @@ coverage:
 	coverage run -m unittest
 	coverage report
 
-.PHONY: test coverage
+install:
+	pip3 install coverage
+	pip3 install retrying
+
+.PHONY: test coverage install
 

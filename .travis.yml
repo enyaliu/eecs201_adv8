@@ -3,5 +3,6 @@ python:
   - "3.5"
 script:
   - make coverage
-install: pip3 install coverage
+install: make install
+
 
